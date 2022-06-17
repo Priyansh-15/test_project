@@ -1,0 +1,768 @@
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3
+$ mkdir project1
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3
+$ mkdir project2
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3
+$ cd project1
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1
+$ git co -b staging
+fatal: not a git repository (or any of the parent directories): .git
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1
+$ git init
+Initialized empty Git repository in C:/Users/priya/Desktop/snackmagic/exercise 3/project1/.git/
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master)
+$ git co -b staging
+Switched to a new branch 'staging'
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (staging)
+$ vim test1.txt
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (staging)
+$ git add .
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (staging)
+$ git commit -m "First Commit"
+[staging (root-commit) 2801935] First Commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test1.txt
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (staging)
+$ git remote
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (staging)
+$ git remote add origin https://github.com/Priyansh-15/test_project
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (staging)
+$ git push -u origin staging
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 243 bytes | 243.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Priyansh-15/test_project
+ * [new branch]      staging -> staging
+branch 'staging' set up to track 'origin/staging'.
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (staging)
+$ cd ..
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3
+$ cd project2
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project2
+$ git clone https://github.com/Priyansh-15/test_project
+Cloning into 'test_project'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project2
+$ git branch
+fatal: not a git repository (or any of the parent directories): .git
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project2
+$ git inti
+git: 'inti' is not a git command. See 'git --help'.
+
+The most similar command is
+        init
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project2
+$ git init
+Initialized empty Git repository in C:/Users/priya/Desktop/snackmagic/exercise 3/project2/.git/
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project2 (master)
+$ git branch
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project2 (master)
+$ rm -rf test_project/ .git
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project2
+$ git clone https://github.com/Priyansh-15/test_project .
+Cloning into '.'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project2 (staging)
+$ git status
+On branch staging
+Your branch is up to date with 'origin/staging'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   test1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test1.txt.bak
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project2 (staging)
+$ git add .
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project2 (staging)
+$ git commit -m "Second commit"
+[staging 62b4557] Second commit
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 100644 test1.txt.bak
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project2 (staging)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 302 bytes | 151.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Priyansh-15/test_project
+   2801935..62b4557  staging -> staging
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project2 (staging)
+$ cd ..
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3
+$ cd project1
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (staging)
+$ git status
+On branch staging
+Your branch is up to date with 'origin/staging'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   test1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test1.txt.bak
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (staging)
+$ git add .
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (staging)
+$ git commit -m "third commit"
+[staging 8eb1c8c] third commit
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 100644 test1.txt.bak
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (staging)
+$ git push
+To https://github.com/Priyansh-15/test_project
+ ! [rejected]        staging -> staging (fetch first)
+error: failed to push some refs to 'https://github.com/Priyansh-15/test_project'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (staging)
+$ git branch
+* staging
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (staging)
+$ git co -b master
+Switched to a new branch 'master'
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master)
+$ git branch -all
+error: did you mean `--all` (with two dashes)?
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master)
+$ git branch --all
+* master
+  staging
+  remotes/origin/staging
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master)
+$ git merge staging
+Already up to date.
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master)
+$ git co -b testing
+Switched to a new branch 'testing'
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (testing)
+$ git status
+On branch testing
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   test1.txt
+        modified:   test1.txt.bak
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (testing)
+$ git add .
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (testing)
+$ git commit -m "A is alphabet"
+[testing 1553e25] A is alphabet
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (testing)
+$ git status
+On branch testing
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   test1.txt
+        modified:   test1.txt.bak
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (testing)
+$ git add .
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (testing)
+$ git commit -m "B is alphabet"
+[testing e255a8a] B is alphabet
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (testing)
+$ git add .
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (testing)
+$ git commit -m "C is alphabet"
+[testing 315210a] C is alphabet
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (testing)
+$ git add .
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (testing)
+$ git commit -m "D is alphabet"
+[testing 3567f83] D is alphabet
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (testing)
+$ git add .
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (testing)
+$ git commit -m "E is alphabet"
+[testing 00ccff3] E is alphabet
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (testing)
+$ git add .
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (testing)
+$ git commit -m "F is alphabet"
+[testing a39e206] F is alphabet
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (testing)
+$ git add .
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (testing)
+$ git commit -m "G is alphabet"
+[testing 0296498] G is alphabet
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (testing)
+$ git add .
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (testing)
+$ git commit -m "H is alphabet"
+[testing eb5333f] H is alphabet
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (testing)
+$ git status
+On branch testing
+nothing to commit, working tree clean
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (testing)
+$ git push
+fatal: The current branch testing has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin testing
+
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (testing)
+$ git push --set--upstream origin testing
+error: unknown option `set--upstream'
+usage: git push [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --repo <repository>   repository
+    --all                 push all refs
+    --mirror              mirror all refs
+    -d, --delete          delete refs
+    --tags                push tags (can't be used with --all or --mirror)
+    -n, --dry-run         dry run
+    --porcelain           machine-readable output
+    -f, --force           force updates
+    --force-with-lease[=<refname>:<expect>]
+                          require old value of ref to be at this value
+    --force-if-includes   require remote updates to be integrated locally
+    --recurse-submodules (check|on-demand|no)
+                          control recursive pushing of submodules
+    --thin                use thin pack
+    --receive-pack <receive-pack>
+                          receive pack program
+    --exec <receive-pack>
+                          receive pack program
+    -u, --set-upstream    set upstream for git pull/status
+    --progress            force progress reporting
+    --prune               prune locally removed refs
+    --no-verify           bypass pre-push hook
+    --follow-tags         push missing but relevant tags
+    --signed[=(yes|no|if-asked)]
+                          GPG sign the push
+    --atomic              request atomic transaction on remote side
+    -o, --push-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (testing)
+$ git push --set-upstream origin testing
+Enumerating objects: 30, done.
+Counting objects: 100% (30/30), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (19/19), done.
+Writing objects: 100% (30/30), 2.61 KiB | 446.00 KiB/s, done.
+Total 30 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'testing' on GitHub by visiting:
+remote:      https://github.com/Priyansh-15/test_project/pull/new/testing
+remote:
+To https://github.com/Priyansh-15/test_project
+ * [new branch]      testing -> testing
+branch 'testing' set up to track 'origin/testing'.
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (testing)
+$ git co master
+Switched to branch 'master'
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   test1.txt
+        modified:   test1.txt.bak
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master)
+$ git add .
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master)
+$ git commit -m "1 is a number"
+[master ce8bcb5] 1 is a number
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master)
+$ git add .
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master)
+$ git commit -m "2 is a number"
+[master ffec3be] 2 is a number
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master)
+$ git add .
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master)
+$ git commit -m "3 is a number"
+[master 33a6f47] 3 is a number
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master)
+$ git add .
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master)
+$ git commit -m "4 is a number"
+[master 72ab3f0] 4 is a number
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master)
+$ git add .
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master)
+$ git commit -m "5 is a number"
+[master fd2610d] 5 is a number
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master)
+$ git add .
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master)
+$ git commit -m "6 is a number"
+[master 26656d4] 6 is a number
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master)
+$ git add .
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master)
+$ git commit -m "7 is a number"
+[master 58acdab] 7 is a number
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master)
+$ git add .
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master)
+$ git commit -m "8 is a number"
+[master bc5d008] 8 is a number
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master)
+$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master)
+$ git push --set-upstream origin master
+Enumerating objects: 27, done.
+Counting objects: 100% (27/27), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (24/24), 2.10 KiB | 268.00 KiB/s, done.
+Total 24 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/Priyansh-15/test_project/pull/new/master
+remote:
+To https://github.com/Priyansh-15/test_project
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master)
+$ rebase testing
+testing: skipped because nonexistent.
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master)
+$ git branch
+* master
+  staging
+  testing
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master)
+$ git rebase testing
+Auto-merging test1.txt
+CONFLICT (content): Merge conflict in test1.txt
+Auto-merging test1.txt.bak
+CONFLICT (content): Merge conflict in test1.txt.bak
+error: could not apply ce8bcb5... 1 is a number
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply ce8bcb5... 1 is a number
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master|REBASE 1/8)
+$ git add .
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master|REBASE 1/8)
+$ git add .
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master|REBASE 1/8)
+$ git commit
+[detached HEAD 55812a0] 1 is a number
+ 2 files changed, 7 insertions(+), 2 deletions(-)
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master|REBASE 1/8)
+$ git rebase --continue
+Auto-merging test1.txt
+CONFLICT (content): Merge conflict in test1.txt
+Auto-merging test1.txt.bak
+CONFLICT (content): Merge conflict in test1.txt.bak
+error: could not apply ffec3be... 2 is a number
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply ffec3be... 2 is a number
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master|REBASE 2/8)
+$ git rebase --skip
+Auto-merging test1.txt
+CONFLICT (content): Merge conflict in test1.txt
+Auto-merging test1.txt.bak
+CONFLICT (content): Merge conflict in test1.txt.bak
+error: could not apply 33a6f47... 3 is a number
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 33a6f47... 3 is a number
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master|REBASE 3/8)
+$ git add .
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master|REBASE 3/8)
+$ git commit
+[detached HEAD ed8e90a] 3 is a number
+ 2 files changed, 4 insertions(+), 2 deletions(-)
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master|REBASE 3/8)
+$ git rebase --continue
+Auto-merging test1.txt
+CONFLICT (content): Merge conflict in test1.txt
+Auto-merging test1.txt.bak
+CONFLICT (content): Merge conflict in test1.txt.bak
+error: could not apply 72ab3f0... 4 is a number
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 72ab3f0... 4 is a number
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master|REBASE 4/8)
+$ git add .
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master|REBASE 4/8)
+$ git commit
+[detached HEAD 31175e9] 4 is a number
+ 2 files changed, 5 insertions(+)
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master|REBASE 4/8)
+$ git rebase --continue
+Auto-merging test1.txt
+CONFLICT (content): Merge conflict in test1.txt
+Auto-merging test1.txt.bak
+CONFLICT (content): Merge conflict in test1.txt.bak
+error: could not apply fd2610d... 5 is a number
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply fd2610d... 5 is a number
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master|REBASE 5/8)
+$ git add .
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master|REBASE 5/8)
+$ git commit
+[detached HEAD 697758c] 5 is a number
+ 1 file changed, 4 insertions(+)
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master|REBASE 5/8)
+$ git rebase --continue
+Auto-merging test1.txt
+CONFLICT (content): Merge conflict in test1.txt
+Auto-merging test1.txt.bak
+CONFLICT (content): Merge conflict in test1.txt.bak
+error: could not apply 26656d4... 6 is a number
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 26656d4... 6 is a number
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master|REBASE 6/8)
+$ git add .
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master|REBASE 6/8)
+$ git commit
+[detached HEAD ab24c89] 6 is a number
+ 2 files changed, 5 insertions(+), 4 deletions(-)
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master|REBASE 6/8)
+$ git rebase --continue
+Auto-merging test1.txt
+CONFLICT (content): Merge conflict in test1.txt
+Auto-merging test1.txt.bak
+CONFLICT (content): Merge conflict in test1.txt.bak
+error: could not apply 58acdab... 7 is a number
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 58acdab... 7 is a number
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master|REBASE 7/8)
+$ git add .
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master|REBASE 7/8)
+$ git commit
+[detached HEAD fb3ebc3] 7 is a number
+ 2 files changed, 5 insertions(+)
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master|REBASE 7/8)
+$ git rebase --continue
+Auto-merging test1.txt
+CONFLICT (content): Merge conflict in test1.txt
+Auto-merging test1.txt.bak
+CONFLICT (content): Merge conflict in test1.txt.bak
+error: could not apply bc5d008... 8 is a number
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply bc5d008... 8 is a number
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master|REBASE 8/8)
+$ git add .
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master|REBASE 8/8)
+$ git commit
+[detached HEAD f981de6] 8 is a number
+ 1 file changed, 4 insertions(+)
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master|REBASE 8/8)
+$ git rebase --continue
+Successfully rebased and updated refs/heads/master.
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project1 (master)
+$ cd ..
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3
+$ cd project2
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project2 (staging)
+$ git branch
+* staging
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project2 (staging)
+$ git fetch origin testing
+remote: Enumerating objects: 29, done.
+remote: Counting objects: 100% (29/29), done.
+remote: Compressing objects: 100% (18/18), done.
+remote: Total 27 (delta 0), reused 27 (delta 0), pack-reused 0
+Unpacking objects: 100% (27/27), 2.39 KiB | 21.00 KiB/s, done.
+From https://github.com/Priyansh-15/test_project
+ * branch            testing    -> FETCH_HEAD
+ * [new branch]      testing    -> origin/testing
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project2 (staging)
+$ git branch --all
+* staging
+  remotes/origin/HEAD -> origin/staging
+  remotes/origin/staging
+  remotes/origin/testing
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project2 (staging)
+$ git branch testing
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project2 (staging)
+$ git branch -d testing
+Deleted branch testing (was 62b4557).
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project2 (staging)
+$ git branch
+* staging
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project2 (staging)
+$ git branch testing -t origin/testing
+branch 'testing' set up to track 'origin/testing'.
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project2 (staging)
+$ git branch
+* staging
+  testing
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project2 (staging)
+$ git switch testing
+Switched to branch 'testing'
+Your branch is up to date with 'origin/testing'.
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project2 (testing)
+$ git log
+commit eb5333f8aa0d4501b872de4efa3ab3506d25b7d1 (HEAD -> testing, origin/testing)
+Author: Priyansh Sharma <priyansh_sharma_15@outlook.com>
+Date:   Fri Jun 17 11:49:08 2022 +0530
+
+    H is alphabet
+
+commit 0296498411f78e65b6e18e2db98bb02a8bba7560
+Author: Priyansh Sharma <priyansh_sharma_15@outlook.com>
+Date:   Fri Jun 17 11:48:50 2022 +0530
+
+    G is alphabet
+
+commit a39e2066b79a6d9cc6789c2cc818d86a6c04401e
+Author: Priyansh Sharma <priyansh_sharma_15@outlook.com>
+Date:   Fri Jun 17 11:48:37 2022 +0530
+
+    F is alphabet
+
+commit 00ccff3f7a2507b290614d0843316549184fe36d
+Author: Priyansh Sharma <priyansh_sharma_15@outlook.com>
+Date:   Fri Jun 17 11:48:26 2022 +0530
+
+
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project2 (testing)
+$
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project2 (testing)
+$ git co master
+error: pathspec 'master' did not match any file(s) known to git
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project2 (testing)
+$ git co -b master
+Switched to a new branch 'master'
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project2 (master)
+$ git merge testing
+Already up to date.
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project2 (master)
+$ git branch
+* master
+  staging
+  testing
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project2 (master)
+$ git branch -d master
+error: Cannot delete branch 'master' checked out at 'C:/Users/priya/Desktop/snackmagic/exercise 3/project2'
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project2 (master)
+$ git co staging
+Switched to branch 'staging'
+Your branch is up to date with 'origin/staging'.
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project2 (staging)
+$ git branch -d master
+error: The branch 'master' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D master'.
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project2 (staging)
+$ git branch -D master
+Deleted branch master (was eb5333f).
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project2 (staging)
+$ git branch
+* staging
+  testing
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project2 (staging)
+$ git co -b master
+Switched to a new branch 'master'
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project2 (master)
+$ git merge testing
+Auto-merging test1.txt
+CONFLICT (content): Merge conflict in test1.txt
+Auto-merging test1.txt.bak
+CONFLICT (add/add): Merge conflict in test1.txt.bak
+Automatic merge failed; fix conflicts and then commit the result.
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project2 (master|MERGING)
+$ # testing was in sync with the remote repository but the branch was just created from staging and staging was not in sync with the remote repository
+
+priya@Priyansh MINGW64 ~/Desktop/snackmagic/exercise 3/project2 (master|MERGING)
+$
